@@ -1,15 +1,14 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
-import { ArrowLeft, Heart } from "lucide-react";
-import { CarFront } from "lucide-react";
-import { Layout } from "lucide-react";
+import { ArrowLeft, Heart, CarFront, Layout } from "lucide-react";
 import { SignInButton } from "@clerk/nextjs";
+import { checkUser } from "@/lib/checkUser";
 
-const Header = async ({ isAdminPage = false }) => {
-  const isAdmin = false;
+const Header = async({ isAdminPage = false }) => {
+  const user = await checkUser();
+  const isAdmin = user?.role === "ADMIN";
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-60 border-b">
       <nav className="mx-auto px-4 py-4 flex items-center justify-between">
@@ -62,15 +61,17 @@ const Header = async ({ isAdminPage = false }) => {
           )}
           <SignedOut>
             <SignInButton forceRedirectUrl="/">
-                <Button variant="outline">Login</Button>
+              <Button variant="outline">Login</Button>
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <UserButton appearance={{
+            <UserButton
+              appearance={{
                 elements: {
-                    avatarBox: "w-10 h-10",
+                  avatarBox: "w-10 h-10",
                 },
-            }}/>
+              }}
+            />
           </SignedIn>
         </div>
       </nav>

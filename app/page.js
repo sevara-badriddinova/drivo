@@ -12,7 +12,7 @@ export default function Home(){
    return (
     <div className="pt-20 flex flex-col">
         {/* Hero */}
-        <section className="relative py-16 md:py-28 dotted-background">
+        <section className="relative py-16 md:py-28 bg-gradient-to-b from-neutral-900 via-zinc-900 to-yellow-900 text-white">
             <div className="max-w-4xl mx-auto text-center">
                 <div className="mb-8">
                     <h1 className="text-5xl md:text-8xl mb-4 gradient-title">Find your dream car with DriVo AI</h1>
@@ -81,7 +81,7 @@ export default function Home(){
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="text-center">
-                        <div className="bg-blue-100 text-blue-700 rounded-full w-16 h-16 flex items-center
+                        <div className="text-yellow-400 bg-yellow-100/60 rounded-full w-16 h-16 flex items-center
                         justify-center mx-auto mb-4">
                             {""}
                             <Car className="h-8 w-8"/>
@@ -91,7 +91,7 @@ export default function Home(){
                     </div>
 
                     <div className="text-center">
-                        <div className="bg-blue-100 text-blue-700 rounded-full w-16 h-16 flex items-center
+                        <div className="text-yellow-400 bg-yellow-100/60 rounded-full w-16 h-16 flex items-center
                         justify-center mx-auto mb-4">
                             {""}
                             <Calendar className="h-8 w-8"/>
@@ -101,7 +101,7 @@ export default function Home(){
                     </div>
 
                     <div className="text-center">
-                        <div className="bg-blue-100 text-blue-700 rounded-full w-16 h-16 flex items-center
+                        <div className="text-yellow-400 bg-yellow-100/60 rounded-full w-16 h-16 flex items-center
                         justify-center mx-auto mb-4">
                             {""}
                             <Shield className="h-8 w-8"/>
@@ -166,10 +166,10 @@ export default function Home(){
         </section>
 
 
-        <section className="py-16 dotted-background text-white">
+        <section className="py-16 bg-gradient-to-b from-neutral-900 via-zinc-900 to-yellow-900 text-white">
             <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl font-bold mb-4">Ready to Find Your Dream Car?</h2>
-                <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-yellow-100 mb-8 max-w-2xl mx-auto">
                     Join thousands of satisfied users who found their perfect 
                     vehicle through our platform
                 </p>
